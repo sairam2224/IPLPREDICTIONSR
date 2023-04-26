@@ -1,0 +1,107 @@
+<html>
+<body>
+    <div class="login">
+       <h1>IPL Match Predictor</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Winning Tean Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Player_Name</label>
+            <select class="form-control" name="Player_Name" placeholder="Select Your Player" required>
+                <option class="placeholder" selected disabled value="">Select your Gender</option>
+                <option value="male">
+                    Male
+                </option>
+                <option value="female">
+                    Female
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Role_Desc</label>
+            <select class="form-control" name="Role_Desc" placeholder="Enter Player Role" required>
+                <option class="placeholder" selected disabled value="">Select Role</option>
+                <option value="Captain">
+                    Captain
+                </option>
+                <option value="Player">
+                    Player
+                </option>
+                <option value="Bowler">
+                    Bowler
+                </option>
+                <option value="Wicket Keeper">
+                    Wicket Keeper
+                </option>
+                <option value="Bats Man">
+                    Bats Man
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Player_team</label>
+            <select class="form-control" name="Player_team"
+                placeholder="Enter your Favourite team" required>
+                <option class="placeholder" selected disabled value="">Select Favourite team</option>
+                <option value="associate's degree">
+                    associate's degree
+                </option>
+                <option value="bachelor's degree">
+                    bachelor's degree
+                </option>
+                <option value="high school">
+                    high school
+                </option>
+                <option value="master's degree">
+                    master's degree
+                </option>
+                <option value="some college">
+                    some college
+                </option>
+                <option value="some high school">
+                    some high school
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Opposit_Team</label>
+            <select class="form-control" name="Opposit_Team" placeholder="Enter your Opposite Team" required>
+                <option class="placeholder" selected disabled value="">Select your opposite team</option>
+                <option value="free/reduced">
+                    free/reduced
+                </option>
+                <option value="standard">
+                    standard
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">is_manofThematch</label>
+            <select class="form-control" name="is_manofThematch" placeholder="Man Of the Match"
+                required>
+                <option class="placeholder" selected disabled value="">Player Will Won Man Of the Match</option>
+                <option value="TRUE">
+                    TRUE
+                </option>
+                <option value="FALSE">
+                    FALSE
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">City_Name</label>
+            <input class="form-control"  name="City_Name"
+                placeholder="Enter Home Ground City" min='0' max='100' />
+        </div>
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
