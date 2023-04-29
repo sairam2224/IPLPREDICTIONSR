@@ -3,6 +3,28 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData,PredictPipeline
+import csv
+
+# Open the CSV file
+with open('artifacts/train.csv', 'r') as csv_file:
+    reader = csv.DictReader(csv_file)
+    
+    # Extract unique player names
+    player_names = set(row['Player_Name'] for row in reader)
+    
+    # Generate HTML for the select dropdown
+    select_options = '\n'.join('<option value="{name}">{name}</option>'.format(name=name) for name in player_names)
+
+# Insert the select dropdown into the HTML form
+select_dropdown = '''
+<div class="mb-3">
+    <label class="form-label">Player Name</label>
+    <select class="form-control" name="Player_Name" placeholder="Select Your Player" required>
+        <option class="placeholder" selected disabled value="">Select a player</option>
+        {options}
+    </select>
+</div>
+'''.format(options=select_options)
 
 application=Flask(__name__)
 
@@ -11,7 +33,7 @@ app=application
 def index():
     return render_template('ind.html')
 
-@app.route('/predictdata',methods=['GET','POST'])
+@app.route('/iplpredict',methods=['GET','POST'])
 def predict_datapoint():
     if request.method=='GET':
         return render_template('home.html')

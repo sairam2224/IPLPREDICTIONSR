@@ -1,26 +1,47 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <title>My Page</title>
+        <style>
+            body {
+                background-image: url("https://wallpapercave.com/wp/wp4059913.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+        </style>
+    </head>
+
 <body>
+    
+
     <div class="login">
-       <h1>IPL Match Predictor</h1>
+        <h1 style="font-size: 2rem;
+           margin-top: 0;
+           text-align: center;
+           color: beige;">
+      IPL Match Predictor
+</h1>
    
        <form action="{{ url_for('predict_datapoint')}}" method="post">
         <h1>
-            <legend>Winning Tean Prediction</legend>
+            <legend style="font-size: 2rem;
+            margin-top: 0;
+            text-align: left;
+            color: goldenrod;">PLAYER RATING PREDICTOR</legend>
         </h1>
         <div class="mb-3">
-            <label class="form-label">Player_Name</label>
-            <select class="form-control" name="Player_Name" placeholder="Select Your Player" required>
-                <option class="placeholder" selected disabled value="">Select your Gender</option>
-                <option value="male">
-                    Male
-                </option>
-                <option value="female">
-                    Female
-                </option>
-            </select>
-        </div>
+            <label class="form-label" style="font-size: 2rem;
+            margin-top: 0;
+            text-align: left;
+            color: orange;">PLAYER NAME</label>
+            <input type="text" name="Player_Name" placeholder="Enter Your Player Name">
+            
+          </div>
         <div class="mb-3">
-            <label class="form-label">Role_Desc</label>
+            <label class="form-label" style="font-size: 2rem;
+            margin-top: 0;
+            text-align: left;
+            color: goldenrod;">PlAYER ROLE</label>
             <select class="form-control" name="Role_Desc" placeholder="Enter Player Role" required>
                 <option class="placeholder" selected disabled value="">Select Role</option>
                 <option value="Captain">
@@ -29,79 +50,139 @@
                 <option value="Player">
                     Player
                 </option>
-                <option value="Bowler">
-                    Bowler
-                </option>
-                <option value="Wicket Keeper">
-                    Wicket Keeper
-                </option>
-                <option value="Bats Man">
-                    Bats Man
+                <option value="Keeper">
+                    Keeper
                 </option>
             </select>
         </div>
         <div class="mb-3">
-            <label class="form-label">Player_team</label>
+            <label class="form-label" style="font-size: 2rem;
+            margin-top: 0;
+            text-align: left;
+            color: orange;">FAVOURITE PLAYER TEAM</label>
             <select class="form-control" name="Player_team"
                 placeholder="Enter your Favourite team" required>
-                <option class="placeholder" selected disabled value="">Select Favourite team</option>
-                <option value="associate's degree">
-                    associate's degree
+                <option class="placeholder" selected disabled value="" >Select Favourite team</option>
+                <option value="Royal Challengers Bangalore">
+                    Royal Challengers Bangalore
                 </option>
-                <option value="bachelor's degree">
-                    bachelor's degree
+                <option value="Kolkata Knight Riders">
+                    Kolkata Knight Riders
                 </option>
-                <option value="high school">
-                    high school
+                <option value="Chennai Super Kings">
+                    Chennai Super Kings
                 </option>
-                <option value="master's degree">
-                    master's degree
+                <option value="Kings XI Punjab">
+                    Kings XI Punjab
                 </option>
-                <option value="some college">
-                    some college
+                <option value="Delhi Daredevils">
+                    Delhi Daredevils
                 </option>
-                <option value="some high school">
-                    some high school
+                <option value="Rajasthan Royals">
+                    Rajasthan Royals
+                <option value="Deccan Chargers">
+                    Deccan Chargers
+                <option value="Mumbai Indians">
+                    Mumbai Indians
                 </option>
             </select>
         </div>
         <div class="mb-3">
-            <label class="form-label">Opposit_Team</label>
+            <label class="form-label" style="font-size: 2rem;
+            margin-top: 0;
+            text-align: left;
+            color: orange;">OPPOSITE PLAYER TEAM</label>
             <select class="form-control" name="Opposit_Team" placeholder="Enter your Opposite Team" required>
                 <option class="placeholder" selected disabled value="">Select your opposite team</option>
-                <option value="free/reduced">
-                    free/reduced
+                <option value="Royal Challengers Bangalore">
+                    Royal Challengers Bangalore
                 </option>
-                <option value="standard">
-                    standard
+                <option value="Kolkata Knight Riders">
+                    Kolkata Knight Riders
+                </option>
+                <option value="Chennai Super Kings">
+                    Chennai Super Kings
+                </option>
+                <option value="Kings XI Punjab">
+                    Kings XI Punjab
+                </option>
+                <option value="Delhi Daredevils">
+                    Delhi Daredevils
+                </option>
+                <option value="Rajasthan Royals">
+                    Rajasthan Royals
+                <option value="Deccan Chargers">
+                    Deccan Chargers
+                <option value="Mumbai Indians">
+                    Mumbai Indians
                 </option>
             </select>
         </div>
         <div class="mb-3">
-            <label class="form-label">is_manofThematch</label>
+            <label class="form-label" style="font-size: 2rem;
+            margin-top: 0;
+            text-align: left;
+            color: orange;">MAN OF THE MATCH</label>
             <select class="form-control" name="is_manofThematch" placeholder="Man Of the Match"
                 required>
                 <option class="placeholder" selected disabled value="">Player Will Won Man Of the Match</option>
-                <option value="TRUE">
-                    TRUE
+                <option value="1">
+                    True
                 </option>
-                <option value="FALSE">
-                    FALSE
+                <option value="0">
+                    False
                 </option>
             </select>
         </div>
         <div class="mb-3">
-            <label class="form-label">City_Name</label>
-            <input class="form-control"  name="City_Name"
-                placeholder="Enter Home Ground City" min='0' max='100' />
+            <label class="form-label" style="font-size: 2rem;
+            margin-top: 0;
+            text-align: left;
+            color: orange;">HOME GROUND TEAM</label>
+            <select class="form-control" name="City_Name" placeholder="Enter Home Ground Team" required>
+                <option class="placeholder" selected disabled value="">Select your Home Ground team</option>
+                <option value="Royal Challengers Bangalore">
+                    Royal Challengers Bangalore
+                </option>
+                <option value="Kolkata Knight Riders">
+                    Kolkata Knight Riders
+                </option>
+                <option value="Chennai Super Kings">
+                    Chennai Super Kings
+                </option>
+                <option value="Kings XI Punjab">
+                    Kings XI Punjab
+                </option>
+                <option value="Delhi Daredevils">
+                    Delhi Daredevils
+                </option>
+                <option value="Rajasthan Royals">
+                    Rajasthan Royals
+                <option value="Deccan Chargers">
+                    Deccan Chargers
+                <option value="Mumbai Indians">
+                    Mumbai Indians
+                </option>
+            </select>
         </div>
 
         <div class="mb-3">
-            <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
+            <input style="font-size: 1rem;
+                          padding: 0.5rem 1rem;
+                          margin-top: 0;
+                          text-align: left;
+                          color: orange;" 
+                   class="btn btn-primary" 
+                   type="submit" 
+                   value="Predict your Player Score" 
+                   required />
         </div>
     </form>
-    <h2>
-       THE  prediction is {{results}}
+    <h2 style="font-size: 2rem;
+    margin-top: 0;
+    text-align: left;
+    color: #ffa500;">
+        YOUR PLAYER SCORE IS  {{results}}
     </h2>
    <body>
 </html>

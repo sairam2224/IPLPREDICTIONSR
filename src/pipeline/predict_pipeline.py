@@ -27,7 +27,7 @@ class CustomData:
         Role_Desc:str,
         Player_team:str,
         Opposit_Team:str,
-        is_manofThematch:bool,
+        is_manofThematch:int,
         City_Name:str):
 
         self.Player_Name = Player_Name
