@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #BFE6FF;
+    background-color: #c4ffbf;
   }
 
 .top-left-link {
@@ -21,17 +21,19 @@ body {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 20%;
-        padding: 20px; /* adds 30 pixels of padding around the image */        
+        width: 10%;
+        padding: 20px; /* adds 30 pixels of padding around the image */    
+        border-radius: 75px; 
+        float: left;
   }
   
   .form-box {
     max-width: 800px;
     margin: 0 auto;
-    background-color: orange;
     padding: 20px;
-    border: 1px gold;
-    border-radius: 4px;
+    border: 10px gold;
+    border-radius: 15px;
+    
   }
   
   h1 {
@@ -41,6 +43,7 @@ body {
 
   h2 {
     text-align: center;
+    color: red;
   }
   
   label {
@@ -59,13 +62,16 @@ body {
   }
 
   .form-group label {
-    color: orange;
+    color: beige;
     font-family: Arial, sans-serif;
+
+   
   }
   
   .form-group input[type="text"] {
     color: orange;
     font-family: Arial, sans-serif;
+    
   }
   
   input[type="submit"] {
@@ -89,7 +95,8 @@ body {
     vertical-align: top;
     margin-right: 20px;
     width: 50%;
-    color: gray;
+    color: white;
+    background: none;
 
   }
   

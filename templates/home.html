@@ -15,23 +15,23 @@
 
 <body>
     <a href="https://github.com/sairam2224/IPLPREDICTIONSR" class="top-left-link" target="_blank" style="color: yellow;">GitHub Repository Link</a>
-        <h1 style="color: beige;">
+        <h1 >
             IPL Match Predictor - Sairam Potharlanka
         </h1>
-        <img src="{{url_for('static', filename='image/sairam12.jpg')}}" alt="Your Profile Picture" class="profile" height="130" width="130">
+        <img src="{{url_for('static', filename='image/sairam12.jpg')}}" alt="Your Profile Picture" class="profile">
 
-        <div class="form-box">
+    <div class="form-box">
 
        <form action="{{ url_for('predict_datapoint')}}" method="POST">
       
-        <div class="form-group" style="color: gold;">
+        <div class="form-group">
             <label for ='Player_Name'>PLAYER NAME</label>
-            <input type="text" name="Player_Name" placeholder="Enter Your Player Name" style="color: gold; background-color:purple;">
+            <input type="text"  class = "form-group" name="Player_Name" placeholder="Enter Your Player Name" style="color: white;">
             
           </div>
-        <div class="form-group" style="color: gold;">
+        <div class="form-group">
             <label for="Role_Desc">PlAYER ROLE</label>
-            <select class="form-control" name="Role_Desc" placeholder="Enter Player Role" required style="color: gold; background-color:purple;">
+            <select class="form-group" name="Role_Desc" placeholder="Enter Player Role" required >
                 <option class="placeholder" selected disabled value="">Select Role</option>
                 <option value="Captain">
                     Captain
@@ -44,11 +44,11 @@
                 </option>
             </select>
         </div>
-        <div class="form-group" style="color: gold;">
+        <div class="form-group">
             <label for ="Player_team">FAVOURITE PLAYER TEAM</label>
-            <select id="Player_team" name="Player_team"
-                placeholder="Enter your Favourite team" required style="color: gold; background-color:purple;">
-                <option class="placeholder" selected disabled value="" >Select Favourite team</option>
+            <select id="Player_team" name="Player_team" class ="form-group"
+                placeholder="Enter your Favourite team" required >
+                <option class="form-group" selected disabled value="" >Select Favourite team</option>
                 <option value="Royal Challengers Bangalore">
                     Royal Challengers Bangalore
                 </option>
@@ -73,10 +73,10 @@
                 </option>
             </select>
         </div>
-        <div class="form-group" style="color: gold;">
+        <div class="form-group">
             <label for="Opposit_Team">OPPOSITE PLAYER TEAM</label>
-            <select class="form-control" name="Opposit_Team" placeholder="Enter your Opposite Team" required style="color: gold; background-color:purple;">
-                <option class="placeholder" selected disabled value="">Select your opposite team</option>
+            <select class="form-group" name="Opposit_Team" placeholder="Enter your Opposite Team" required >
+                <option class="form-group" selected disabled value="">Select your opposite team</option>
                 <option value="Royal Challengers Bangalore">
                     Royal Challengers Bangalore
                 </option>
@@ -101,10 +101,10 @@
                 </option>
             </select>
         </div>
-        <div class="form-group" style="color: gold;">
+        <div class="form-group">
             <label for="is_manofThematch">MAN OF THE MATCH</label>
             <select class="form-group" name="is_manofThematch" placeholder="Man Of the Match"
-                required style="color: gold; background-color:purple;">
+                required >
                 <option class="form-group" selected disabled value="">Player Will Won Man Of the Match</option>
                 <option value="1">
                     True
@@ -114,9 +114,9 @@
                 </option>
             </select>
         </div>
-        <div class="form-group" style="color: gold;">
+        <div class="form-group" >
             <label for="City_Name">HOME GROUND TEAM</label>
-            <select class="placeholder" name="City_Name" placeholder="Enter Home Ground Team" required style="color: gold; background-color:purple;" >
+            <select class="form-group" name="City_Name" placeholder="Enter Home Ground Team" required>
                 <option class="placeholder" selected disabled value="" >Select your Home Ground team</option>
                 <option value="Royal Challengers Bangalore">
                     Royal Challengers Bangalore
@@ -144,13 +144,11 @@
         </div>
 
         <div style="clear:both;" ></div>
-      <input type="submit" value="Submit" style="color: gold; background-color:green;">
+      <input type="submit" value="Submit" >
     </form>
     </div>
-    <div>      
-    <h2 style="color: rgb(255, 68, 0);">
+     <h2 >
       Your Player Score Is : {{ results }} Out Of 5
     </h2>
   </body>
-</html>
 </html>
