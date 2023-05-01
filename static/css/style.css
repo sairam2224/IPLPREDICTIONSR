@@ -43,7 +43,7 @@ body {
 
   h2 {
     text-align: center;
-    color: red;
+    color: white;
   }
   
   label {
@@ -53,6 +53,14 @@ body {
   }
   
   input[type="text"], select {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+   select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -95,13 +103,17 @@ body {
     vertical-align: top;
     margin-right: 20px;
     width: 50%;
-    color: white;
+    color: yellow;
     background: none;
 
   }
   
   .form-group label {
     margin-bottom: 5px;
+  }
+
+  select.form-group option:hover{
+    box-shadow: 0 0 10px 100px #1882A8 inset;
   }
  
     .placeholder {
