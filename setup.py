@@ -13,10 +13,10 @@ def get_requirements(file_path:str)->List[str]:
     return requirements
 
 setup(
-name = 'GlobalData_project',
+name = 'IPL_PREDICTION',
 version='0.0.1',
-author='sairam',
-author_email='rampotharlanka2224@gmail.com',
+author='sowmya',
+author_email='sowmyapotharlanka1319@gmail.com',
 packages=find_packages(),
 install_requires=get_requirements('requirements.txt')
 
